@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ * Copyright (C) 2013 M.Nakamura
+ *
+ * This software is licensed under a Creative Commons
+ * Attribution-NonCommercial-ShareAlike 2.1 Japan License.
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 		http://creativecommons.org/licenses/by-nc-sa/2.1/jp/legalcode
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+	
+	<Button
+		android:id="@+id/clock_alarm_stop_Button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/clock_alarm_stop"
+		android:onClick="onClockAlarmStopButtonClick"
+		/>
+
+</LinearLayout>

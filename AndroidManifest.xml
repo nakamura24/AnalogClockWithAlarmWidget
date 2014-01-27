@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jp.widget.analogclockwithalarm"
+    android:versionCode="1"
+    android:versionName="1.0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <receiver
+            android:name="AnalogClockWidget"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_clock_analog" />
+        </receiver>
+
+        <activity
+            android:name="ClockWidgetConfigure"
+            android:exported="false"
+            android:theme="@style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ClockWidgetAlarm"
+            android:exported="false"
+            android:theme="@style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_ALARM" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
